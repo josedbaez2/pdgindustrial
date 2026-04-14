@@ -1,0 +1,64 @@
+---
+import { getLang } from '../i18n/utils';
+
+interface Props { lang: 'es' | 'en'; }
+const { lang } = Astro.props;
+const t = getLang(lang);
+const base = import.meta.env.BASE_URL;
+---
+<footer class="footer">
+  <div class="footer__inner container">
+    <img
+      src={`${base}images/logo.jpg`}
+      alt="P.D.G. Industrial, S.R.L."
+      height="28"
+      class="footer__logo"
+    />
+    <div class="footer__info">
+      <p>{t.contact.phone} · <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></p>
+      <p>{t.contact.address}</p>
+      <p class="footer__standards">{t.footer.standards}</p>
+    </div>
+    <div class="footer__bottom">
+      <span>{t.footer.rights}</span>
+      <a href={`${base}${t.footer.lang_switch_href}`} class="footer__lang">{t.footer.lang_switch}</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--green-dark);
+    color: #a8c89e;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+  }
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .footer__logo { filter: brightness(0) invert(1); opacity: 0.75; }
+  .footer__info { font-size: 0.85rem; line-height: 1.8; }
+  .footer__info a { color: var(--green-light); }
+  .footer__info a:hover { text-decoration: underline; }
+  .footer__standards { opacity: 0.6; margin-top: 0.25rem; }
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(98,146,84,0.2);
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+  .footer__lang {
+    color: var(--green-light);
+    opacity: 1;
+    font-weight: 600;
+    border: 1px solid rgba(98,146,84,0.4);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+  }
+  .footer__lang:hover { opacity: 0.8; }
+</style>
