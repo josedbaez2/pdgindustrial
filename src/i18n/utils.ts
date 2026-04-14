@@ -1,7 +1,7 @@
 import es from './es';
 import en from './en';
 
-type Lang = 'es' | 'en';
+export type Lang = 'es' | 'en';
 const translations = { es, en };
 
 export function getLang(lang: Lang) {
