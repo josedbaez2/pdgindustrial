@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { getLang } from '../../i18n/utils';
+
+const t = getLang('en');
+---
+<Base title={t.meta.services_title} lang="en">
+
+  <div class="page-header">
+    <div class="container">
+      <p class="label">{t.services.label}</p>
+      <h1>{t.services.heading}</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="cards-grid">
+        {t.services.items.map((s, i) => (
+          <ServiceCard name={s.name} description={s.description} index={i} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-header {
+    background: var(--green-tint);
+    border-bottom: 1px solid var(--green-border);
+    padding: 2.5rem 0;
+  }
+  .page-header h1 { margin-top: 0.25rem; }
+</style>
