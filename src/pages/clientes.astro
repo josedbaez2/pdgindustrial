@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import { getLang } from '../i18n/utils';
+
+const t = getLang('es');
+---
+<Base title={t.meta.clients_title} lang="es">
+
+  <div class="page-header">
+    <div class="container">
+      <p class="label">{t.clients.label}</p>
+      <h1>{t.clients.heading}</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <ul class="clients-list">
+        {t.clients.items.map(c => (
+          <li class="client-item">
+            <span class="client-dot"></span>
+            {c}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-header {
+    background: var(--green-tint);
+    border-bottom: 1px solid var(--green-border);
+    padding: 2.5rem 0;
+  }
+  .page-header h1 { margin-top: 0.25rem; }
+  .clients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+  .client-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .client-dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+</style>
