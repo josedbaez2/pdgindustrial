@@ -20,15 +20,15 @@ const t = getLang('es');
         <div class="contact-info">
           <dl class="contact-dl">
             <div>
-              <dt>Teléfono</dt>
+              <dt>{t.contact.phone_label}</dt>
               <dd><a href={`tel:+1${t.contact.phone.replace(/\D/g,'')}`}>{t.contact.phone}</a></dd>
             </div>
             <div>
-              <dt>Correo electrónico</dt>
+              <dt>{t.contact.email_label}</dt>
               <dd><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></dd>
             </div>
             <div>
-              <dt>Dirección</dt>
+              <dt>{t.contact.address_label}</dt>
               <dd>{t.contact.address}</dd>
             </div>
           </dl>
@@ -36,7 +36,7 @@ const t = getLang('es');
 
         <div class="contact-form-box">
           <p class="form-note">
-            Para contactarnos, envíe un correo directamente a{' '}
+            {t.contact.form_note}{' '}
             <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
           </p>
           <a href={`mailto:${t.contact.email}`} class="btn-primary">{t.contact.cta}</a>
