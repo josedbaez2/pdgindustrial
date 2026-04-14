@@ -1,0 +1,39 @@
+---
+interface Props {
+  name:        string;
+  description: string;
+  index:       number;
+}
+const { name, description, index } = Astro.props;
+---
+<div class="service-card">
+  <div class="service-card__num">{String(index + 1).padStart(2, '0')}</div>
+  <h3 class="service-card__name">{name}</h3>
+  <p class="service-card__desc">{description}</p>
+</div>
+
+<style>
+  .service-card {
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--green);
+    padding: 1.25rem;
+    background: #fafbf9;
+  }
+  .service-card__num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .service-card__name {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .service-card__desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+</style>
