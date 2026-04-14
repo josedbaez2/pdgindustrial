@@ -1,0 +1,65 @@
+---
+import { getLang, getNavLinks } from '../i18n/utils';
+
+interface Props { lang: 'es' | 'en'; }
+const { lang } = Astro.props;
+const t = getLang(lang);
+const base = import.meta.env.BASE_URL;
+const links = getNavLinks(lang, base);
+---
+<header class="nav">
+  <div class="nav__inner container">
+    <a href={links.home} class="nav__logo">
+      <img
+        src={`${base}images/logo.jpg`}
+        alt="P.D.G. Industrial, S.R.L."
+        height="40"
+        width="auto"
+      />
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav__links">
+        <li><a href={links.services}>{t.nav.services}</a></li>
+        <li><a href={links.projects}>{t.nav.projects}</a></li>
+        <li><a href={links.clients}>{t.nav.clients}</a></li>
+        <li><a href={links.contact} class="nav__cta">{t.nav.contact}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .nav__logo img { display: block; }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav__links a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: color 0.15s;
+  }
+  .nav__links a:hover { color: var(--green); }
+  .nav__cta {
+    background: var(--green);
+    color: #fff !important;
+    padding: 0.5rem 1.1rem;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+  .nav__cta:hover { background: var(--green-mid) !important; }
+</style>
