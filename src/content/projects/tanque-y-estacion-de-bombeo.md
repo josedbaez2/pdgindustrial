@@ -7,5 +7,12 @@ client: "Sunix"
 location: "Santo Domingo Norte"
 date: 2014-10-01
 image: /images/projects/tanque-y-estacion-de-bombeo.jpg
+gallery:
+  - /images/projects/gallery/tanque-y-estacion-de-bombeo/1.jpg
+  - /images/projects/gallery/tanque-y-estacion-de-bombeo/2.jpg
+  - /images/projects/gallery/tanque-y-estacion-de-bombeo/3.jpg
+  - /images/projects/gallery/tanque-y-estacion-de-bombeo/4.jpg
+  - /images/projects/gallery/tanque-y-estacion-de-bombeo/5.jpg
+  - /images/projects/gallery/tanque-y-estacion-de-bombeo/6.jpg
 category: tanks
 ---

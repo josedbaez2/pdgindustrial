@@ -11,6 +11,7 @@ const projects = defineCollection({
     location:       z.string(),
     date:           z.coerce.date(),
     image:          z.string(),
+    gallery:        z.array(z.string()).optional().default([]),
     category:       z.enum([
       'structures',
       'tanks',

@@ -7,5 +7,12 @@ client: "Los Orígenes Power Plant"
 location: "San Pedro de Macorís"
 date: 2014-10-01
 image: /images/projects/tanque-3mil-metros-cubicos.jpg
+gallery:
+  - /images/projects/gallery/tanque-3mil-metros-cubicos/1.jpg
+  - /images/projects/gallery/tanque-3mil-metros-cubicos/2.jpg
+  - /images/projects/gallery/tanque-3mil-metros-cubicos/3.jpg
+  - /images/projects/gallery/tanque-3mil-metros-cubicos/4.jpg
+  - /images/projects/gallery/tanque-3mil-metros-cubicos/5.jpg
+  - /images/projects/gallery/tanque-3mil-metros-cubicos/6.jpg
 category: tanks
 ---

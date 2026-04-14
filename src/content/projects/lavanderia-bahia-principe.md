@@ -7,5 +7,14 @@ client: "Tropigas"
 location: "Bávaro"
 date: 2019-03-01
 image: /images/projects/lavanderia-bahia-principe.jpg
+gallery:
+  - /images/projects/gallery/lavanderia-bahia-principe/1.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/2.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/3.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/4.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/5.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/6.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/7.jpg
+  - /images/projects/gallery/lavanderia-bahia-principe/8.jpg
 category: piping
 ---
